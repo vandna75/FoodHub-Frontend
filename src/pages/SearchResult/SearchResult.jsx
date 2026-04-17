@@ -19,7 +19,7 @@ const SearchResult = () => {
       setError("");
       try {
         const res = await axios.get(
-          `http://localhost:4000/api/search?q=${encodeURIComponent(query)}`
+          `https://foodhub-backend-wptp.onrender.com/api/search?q=${encodeURIComponent(query)}`
         );
         setResults(res.data.foods || []);
       } catch (err) {
@@ -55,7 +55,7 @@ const SearchResult = () => {
             >
 
               <img
-                src={`http://localhost:4000/images/${item.image}`}
+                src={`https://foodhub-backend-wptp.onrender.com/images/${item.image}`}
                 alt={item.name}
                 className="food-img"
               />
