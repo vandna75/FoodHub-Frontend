@@ -1,0 +1,50 @@
+.search-result-page {
+  padding: 40px;
+  min-height: 80vh;
+  background: #fafafa;
+}
+
+.search-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.loading,
+.error,
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.food-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.food-card:hover {
+  transform: scale(1.03);
+}
+
+.food-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category {
+  font-size: 14px;
+  color: #999;
+}

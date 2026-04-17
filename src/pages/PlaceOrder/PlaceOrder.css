@@ -1,0 +1,176 @@
+.place-order{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.place-order-left{
+    width: 100%;
+    max-width: max(30%,500px);
+}
+
+.place-order-left .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.place-order-left input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+
+.place-order-left .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-right{
+    width: 100%;
+    max-width: max(40%,500px);
+}
+
+.place-order .cart-total button{
+    margin-top: 30px;
+}
+
+.payment-method {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-method label {
+  border: 2px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.payment-method input[type="radio"] {
+  accent-color: tomato;
+  transform: scale(1.2);
+}
+
+.payment-method label:hover {
+  border-color: tomato;
+}
+
+.payment-method input[type="radio"]:checked + span {
+  font-weight: bold;
+}
+
+.payment-method input[type="radio"]:checked ~ label {
+  border-color: tomato;
+}
+
+/* 🖥️ Default (Desktop) layout – already perfect */
+
+/* 💻 Tablet View */
+@media (max-width: 992px) {
+  .place-order {
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 70px;
+  }
+
+  .place-order-left,
+  .place-order-right {
+    max-width: 100%;
+  }
+
+  .place-order-left .title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .place-order-left input {
+    padding: 9px;
+    font-size: 15px;
+  }
+
+  .payment-method label {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+/* 📱 Mobile View */
+@media (max-width: 768px) {
+  .place-order {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
+    align-items: center;
+  }
+
+  .place-order-left,
+  .place-order-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .place-order-left .title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .place-order-left .multi-fields {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .place-order-left input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .payment-method {
+    gap: 10px;
+  }
+
+  .payment-method label {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .place-order .cart-total button {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* 📱 Extra Small (Under 480px) */
+@media (max-width: 480px) {
+  .place-order {
+    margin-top: 40px;
+    gap: 25px;
+  }
+
+  .place-order-left .title {
+    font-size: 20px;
+  }
+
+  .payment-method label {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .place-order-left input {
+    font-size: 13px;
+    padding: 7px;
+  }
+}
